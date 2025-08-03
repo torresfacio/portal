@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hilltop Estates</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Open Sans', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      background-color: #ffffff;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #eaeaea;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .logo {
+      max-width: 150px;
+      margin: 0.5rem auto;
+    }
+    nav {
+      margin-top: 1rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    nav a:hover {
+      color: #555;
+    }
+    main {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #777;
+      border-top: 1px solid #eaeaea;
+    }
+    .hidden {
+      display: none;
+    }
+    .button-link {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: bold;
+      margin-top: 1rem;
+    }
+    .button-link:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img class="logo" src="hilltop-estates.png" alt="Hilltop Estates Logo" />
+    <h1>Hilltop Estates</h1>
+    <p>Elevated Living. Exceptional Homes.</p>
+    <nav>
+      <a href="#home" onclick="showSection('home')">Home</a>
+      <a href="#maintenance" onclick="showSection('maintenance')">Maintenance</a>
+      <a href="#contact" onclick="showSection('contact')">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home">
+      <h2>Welcome to Hilltop Estates</h2>
+      <p>
+        Discover luxury real estate with panoramic views and timeless architecture. Hilltop Estates brings elegance, comfort, and style to every home.
+      </p>
+    </section>
+
+    <section id="maintenance" class="hidden">
+      <h2>Request Maintenance Service</h2>
+      <p>If you're a resident and need maintenance, please click the button below to submit a request through our secure form:</p>
+      <a class="button-link" href="https://form.jotform.com/252143962452052" target="_blank">Submit Maintenance Request</a>
+    </section>
+
+    <section id="contact" class="hidden">
+      <h2>Contact Us</h2>
+      <p>
+        Have questions or want to schedule a tour? Reach out to us at <strong>info@hilltopestates.com</strong>
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Hilltop Estates. All rights reserved.
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('main section').forEach(section => {
+        section.classList.add('hidden');
+      });
+      document.getElementById(id).classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
